@@ -7,12 +7,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "electron-vite dev",
-    "build": "electron-vite build",
+    "build": "electron-vite build && cd backend && npm install && npm run build",
     "preview": "electron-vite preview",
     "package": "electron-vite build && electron-builder",
     "package:win": "electron-vite build && electron-builder --win",
     "package:mac": "electron-vite build && electron-builder --mac",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "start": "node backend/dist/server.js"
   },
   "dependencies": {
     "electron-store": "^8.2.0",
