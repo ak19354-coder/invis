@@ -16,6 +16,11 @@ interface AIRequest {
 }
 
 export async function aiRoutes(fastify: FastifyInstance) {
+  // Health check endpoint
+  fastify.get('/health', async () => {
+    return { status: 'ok', message: 'Invis AI Backend is running' }
+  })
+
   // REST Endpoint for non-streaming completions
   fastify.post('/complete', async (request: FastifyRequest<{ Body: AIRequest }>, reply: FastifyReply) => {
     const { prompt, context, role, resume } = request.body
