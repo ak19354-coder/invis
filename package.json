@@ -13,7 +13,8 @@
     "package:win": "electron-vite build && electron-builder --win",
     "package:mac": "electron-vite build && electron-builder --mac",
     "format": "prettier --write src/",
-    "start": "node backend/dist/server.js"
+    "start": "node backend/dist/server.js",
+    "postinstall": "cd backend && npm install && npm run build"
   },
   "dependencies": {
     "electron-store": "^8.2.0",
