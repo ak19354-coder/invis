@@ -2,7 +2,7 @@ import fastify from 'fastify'
 import cors from '@fastify/cors'
 import fastifyWebsocket from '@fastify/websocket'
 import dotenv from 'dotenv'
-import { aiRoutes } from './routes/ai'
+import { aiRoutes } from './routes/ai.js'
 
 dotenv.config()
 

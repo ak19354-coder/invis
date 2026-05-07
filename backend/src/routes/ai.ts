@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify'
-import { SocketStream } from '@fastify/websocket'
+
 import { GoogleGenAI } from '@google/genai'
 
 // Instantiate Gemini API. If GEMINI_API_KEY is not set, we will use a mock stream below.
